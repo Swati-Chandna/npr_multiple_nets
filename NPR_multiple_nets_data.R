@@ -202,7 +202,7 @@ v311<-v3;
 ys1<-unlist(Gshat)
 y1=cbind(c(ys1));
 
-xxx11_multigr <- bam(y1~s(v111,v211,v311),family=gaussian(link = "identity"))
+xxx11_multigr <- bam(y1~s(v111,v211,v311,fx=TRUE),family=gaussian(link = "identity"))
 rhoHat=matrix(0,N,1);
 for (j in 1:N)
 {
@@ -253,7 +253,7 @@ Gshatavg=apply(Gs,c(1,2),mean);
 y1<-cbind(c(Gshatavg))
 
 
-xxx11_gr <- bam(y1~s(v1,v2),family=gaussian(link = "identity"))
+xxx11_gr <- bam(y1~s(v1,v2,fx=TRUE),family=gaussian(link = "identity"))
 loc1_gr<- data.frame(v1=rep(sxihatt,each=n),v2=rep(sxihatt,times=n))
 preds11_gr <- matrix(predict.gam(xxx11_gr,newdata=loc1_gr,type='response'),n)
 
