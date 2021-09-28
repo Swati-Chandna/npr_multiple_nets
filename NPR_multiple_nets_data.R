@@ -202,8 +202,7 @@ v311<-v3;
 ys1<-unlist(Gshat)
 y1=cbind(c(ys1));
 
-xxx11_multigr <- bam(y1~s(v111,v211,v311),family=gaussian(link = "identity"))####gives error: Error in bgam.fit(G, mf, chunk.size, gp, scale, gamma, method = method,  : 
-
+xxx11_multigr <- bam(y1~s(v111,v211,v311),family=gaussian(link = "identity"))
 rhoHat=matrix(0,N,1);
 for (j in 1:N)
 {
