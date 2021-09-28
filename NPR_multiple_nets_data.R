@@ -172,7 +172,7 @@ perm<-perm_pp[,minstress];
 #save(xihatt,perm, file = "xihatt_Templeton_PP25.RData")
 #load("xihatt_Templeton_PP25.RData")
 
-load("permSOEBrain2_PP25_jcgs.RData")
+load("xihatt_Templeton_PP25.RData")
 
 sxihatt=sort(xihatt)
 
